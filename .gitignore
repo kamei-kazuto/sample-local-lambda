@@ -1,0 +1,4 @@
+.memo
+node_modules
+index.js
+yarn.lock

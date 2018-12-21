@@ -1,8 +1,18 @@
-AWSTemplateFormatVersion: '2010-09-09'
+AWSTemplateFormatVersion: '2018-12-21'
 Transform: AWS::Serverless-2016-10-31
+Description: SAM Local test
 Resources:
-  lambdaFunction:
+  HelloWorld:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: index.handler
+      Handler: index.hello
       Runtime: nodejs6.10
+      Environment:
+        Variables:
+          NODE_ENV: !Ref NODE_ENV
+      Events:
+        GetResource:
+          Type: Api
+          Properties:
+            Path: /resource/{resourceId}
+            Method: put
