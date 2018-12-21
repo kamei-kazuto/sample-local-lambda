@@ -1,0 +1,7 @@
+Usage: sam local generate-event dynamodb [OPTIONS] COMMAND [ARGS]...
+
+Options:
+  --help  Show this message and exit.
+
+Commands:
+  update  Generates an Amazon DynamoDB Update Event
